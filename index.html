@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Заметки</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <h1>Заметки</h1>
+        <p>Сохраняйте быстрые идеи и задачи прямо в браузере.</p>
+      </header>
+
+      <section class="composer" aria-label="Создать заметку">
+        <textarea
+          id="note-input"
+          placeholder="Напишите заметку..."
+          rows="4"
+          aria-label="Текст заметки"
+        ></textarea>
+        <div class="composer__actions">
+          <button id="add-note" type="button">Добавить</button>
+          <span id="char-count">0 / 200</span>
+        </div>
+      </section>
+
+      <section class="notes" aria-label="Список заметок">
+        <div class="notes__header">
+          <h2>Мои заметки</h2>
+          <button id="clear-notes" type="button" class="secondary">Очистить все</button>
+        </div>
+        <ul id="notes-list" class="notes__list"></ul>
+        <p id="empty-state" class="notes__empty">Пока нет заметок. Добавьте первую!</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
